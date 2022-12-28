@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { BaseColaboradores } from './Datos/DatosColaboradores.js'
+import { useState } from 'react';
+import Colaboradores from './Componentes/Colaboradores.jsx'; 
+import FormularioColaboradores from './Componentes/FormularioColaboradores.jsx';
+import Buscador from './Componentes/Buscador.jsx';
 
 function App() {
+const [lstColab, setLstColab] = useState(BaseColaboradores);
+const [buscador, setBuscador] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Buscador lstColab={lstColab} setBuscador={setBuscador} buscador={buscador} />
+      <FormularioColaboradores lstColab={lstColab} setLstColab={setLstColab}/>
+      <Colaboradores lstColab={lstColab} buscador={buscador} />
+      
     </div>
   );
 }
