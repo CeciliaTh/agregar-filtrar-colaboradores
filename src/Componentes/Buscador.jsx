@@ -9,7 +9,7 @@ const Buscador = (Props) => {
         <div style={ width } className='mb-4'>
             <nav className="navbar navbar-dark bg-dark">
                 <div className="container-fluid">
-                    <a href={url} className="navbar-brand">Buscador de Colaboradores {Props.buscador}</a>
+                    <a href={url} className="navbar-brand">Buscador de Colaboradores</a>
                     <form className="d-flex" role="search">
                         <input className="form-control me-2" type="search" placeholder="Buscador" aria-label="Buscador"
                             onChange={(e) => Props.setBuscador(e.target.value)} 
