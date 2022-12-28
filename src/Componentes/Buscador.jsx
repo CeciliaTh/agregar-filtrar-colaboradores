@@ -3,9 +3,10 @@ import React from 'react'
 const Buscador = (Props) => {
 
     const url='';
+    const width = {width:'100%'}
 
     return (
-        <div>
+        <div style={ width } className='mb-4'>
             <nav className="navbar navbar-dark bg-dark">
                 <div className="container-fluid">
                     <a href={url} className="navbar-brand">Buscador de Colaboradores {Props.buscador}</a>

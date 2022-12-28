@@ -1,8 +1,10 @@
 import { BaseColaboradores } from './Datos/DatosColaboradores.js'
 import { useState } from 'react';
+import "./Estilos/estilos.css";
 import Colaboradores from './Componentes/Colaboradores.jsx'; 
 import FormularioColaboradores from './Componentes/FormularioColaboradores.jsx';
 import Buscador from './Componentes/Buscador.jsx';
+
 
 function App() {
 const [lstColab, setLstColab] = useState(BaseColaboradores);
